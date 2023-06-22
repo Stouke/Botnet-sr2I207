@@ -81,6 +81,9 @@ La commande utilisée pour réaliser cette opération est :
 
 Où my_icon.ico est l'icône Excel que nous utilisons pour masquer notre exécutable.
 
+![alt text](screenshots/12.png "Utilisation de pyinstaller sur Windows")
+
+
 
 # Conclusion
 
