@@ -68,6 +68,8 @@ Nous avons vu l'eventail de possibilités que nous avons lorsque la victime a é
 Pour cela, il suffit de compiler le fichier ```agent.py``` sur l'ordinateur de la victime. L'idéal pour nous serait de le transformer en executable camouflé en excel pour que la victime l'execute sans se rendre compte qu'elle a été infecté. 
 Par exemple, voici le fichier qui infecterait la victime: 
 
+![alt text](screenshots/exe.png "Malware")
+
 
 Lorsque la victime ouvre ce fichier, elle pense qu'il s'agit simplement d'un document Excel. Cependant, en arrière-plan, le fichier agent.py est exécuté, connectant l'ordinateur de la victime au serveur Ares et ajoutant ainsi l'ordinateur à notre botnet.
 
@@ -87,5 +89,15 @@ Dans le cadre de ce projet, nous avons vu comment un botnet comme Ares peut êtr
 Il est important de souligner que cette démonstration a été réalisée à des fins éducatives et de recherche uniquement. L'objectif est d'améliorer notre compréhension des botnets et de développer des stratégies pour les contrer.
 
 L'utilisation de botnets à des fins malveillantes est illégale et contraire à l'éthique. De plus, l'ouverture de fichiers provenant de sources inconnues ou suspectes est un risque de sécurité majeur. Il est donc important de toujours faire preuve de prudence lors de l'ouverture de fichiers et de toujours maintenir à jour ses logiciels de sécurité.
+
+
+
+# Problèmes rencontrés
+
+Le botnet Ares, tout comme son homologue Byob, requiert l'utilisation de Python2 pour fonctionner correctement. Cela nécessite de pouvoir passer d'une version plus récente de Python à une version plus ancienne, un processus appelé "rétrogradation". Pour accomplir cette tâche, j'ai utilisé l'outil "pyenv", que j'ai dû installer à la fois sur ma machine Linux et Windows.
+
+Sur Windows, j'ai eu besoin de compiler le fichier exécutable avec l'aide de PyInstaller, pour m'assurer qu'il était à jour. Idéalement, un attaquant disposerait d'un fichier qui pourrait s'adapter automatiquement à la version de Python utilisée par la machine de la victime ciblée.
+
+Il est à noter qu'une tentative d'utilisation de Python3 ou toute autre version que Python2 se traduira par des erreurs de compilation avec Flask et d'autres dépendances. J'ai investi beaucoup de temps à tenter de résoudre ces problèmes, sans succès, me forçant finalement à utiliser la version 2.7.18 de Python. Je recommande donc d'emblée d'opter pour cette version afin d'éviter ces complications.
 
 
