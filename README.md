@@ -1,4 +1,4 @@
-# DL-based-malware-detection
+# Botnet
 Warning: Only use this software according to your current legislation. Misuse of this software can raise legal and ethical issues which I don't support nor can be held responsible for.
 
 # I. Introduction
